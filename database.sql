@@ -39,8 +39,22 @@ CREATE TABLE IF NOT EXISTS `migrations` (
 -- Copiando dados para a tabela crud.migrations: ~1 rows (aproximadamente)
 /*!40000 ALTER TABLE `migrations` DISABLE KEYS */;
 INSERT INTO `migrations` (`version`) VALUES
-	(2);
+	(3);
 /*!40000 ALTER TABLE `migrations` ENABLE KEYS */;
+
+-- Copiando estrutura para tabela crud.salario
+CREATE TABLE IF NOT EXISTS `salario` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `user_id` int(11) NOT NULL,
+  `salario` varchar(255) NOT NULL,
+  `salario_atual` enum('yes','no') NOT NULL DEFAULT 'yes',
+  `date_created` date NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- Copiando dados para a tabela crud.salario: ~0 rows (aproximadamente)
+/*!40000 ALTER TABLE `salario` DISABLE KEYS */;
+/*!40000 ALTER TABLE `salario` ENABLE KEYS */;
 
 -- Copiando estrutura para tabela crud.users
 CREATE TABLE IF NOT EXISTS `users` (
