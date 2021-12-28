@@ -7,42 +7,16 @@ class Cep {
     }
 	
     public function busca_cep($cep){
-		
-		
-
 		$cep = str_replace(".", "", $cep);	
 		$cep = str_replace("-", "", $cep);	
-
-		$url = 'http://api.postmon.com.br/v1/cep/'.$cep.'?format=xml';
-		$ch = curl_init($url);
-		curl_setopt($ch, CURLOPT_TIMEOUT, 5);
-		curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 5);
-		curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-		$data = curl_exec($ch);
-		curl_close($ch);
-		$xml = simplexml_load_string($data);
-				
-
-		if($xml){
-			$xmlCidadeArr = explode(":",$xml->cidade);
-			$xmlBairroArr =  explode(":",$xml->bairro);
-			$xmlLogradouroArr = explode(":",$xml->logradouro);
-			$xmlEstadoArr = explode(":",$xml->estado);
-			$obj['logradouro'] = $xmlLogradouroArr[0];
-			$obj['bairro'] = $xmlBairroArr[0];
-			$obj['cidade'] = $xmlCidadeArr[0];
-			$obj['uf'] = $xmlEstadoArr[0];
-		}else{
-			$obj['logradouro'] = 'Cep não existe';
-			$obj['bairro'] = '';
-			$obj['cidade'] = '';
-			$obj['uf'] = 0;
-		}
 		
-				
-			
-		
-				
+		$reg = simplexml_load_file("http://cep.republicavirtual.com.br/web_cep.php?formato=xml&cep=" . $cep);
+	 
+		$obj['sucesso'] = (string) $reg->resultado;
+		$obj['logradouro']     = (string) $reg->tipo_logradouro . ' ' . $reg->logradouro;
+		$obj['bairro']  = (string) $reg->bairro;
+		$obj['cidade']  = (string) $reg->cidade;
+		$obj['uf']  = (string) $reg->uf;
 		echo(json_encode($obj));
 		
     }
