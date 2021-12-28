@@ -56,15 +56,7 @@
 				<div class="nav-no-collapse header-nav">
 					<ul class="nav pull-right">
 
-						<!-- start: User Dropdown -->
-						<li class="dropdown">
-							<a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
-								<i class="halflings-icon white user"></i>Usuário
-								<span class="caret"></span>
-							</a>
-
-						</li>
-						<!-- end: User Dropdown -->
+					
 					</ul>
 				</div>
 				<!-- end: Header Menu -->
@@ -95,7 +87,7 @@
 			<ul class="breadcrumb">
 				<li>
 					<i class="icon-home"></i>
-					<a href="inicio.php">Begin</a> 
+					<a href="<?php echo $this->config->base_url(); ?>Colaboradores">Início</a> 
 					<i class="icon-angle-right"></i>
 				</li>
 			</ul>

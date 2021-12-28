@@ -18,6 +18,7 @@
 								 <th>CPF</th>	
 								 <th>RG</th>	
 								 <th>Data Nascimento</th>	
+								 <th>Salário</th>	
 								 <th>Opções</th>	
 							  </tr>
 						  </thead>   
@@ -34,6 +35,7 @@
 								 <td ><?php echo $usuario->cpf; ?> </td>
 								 <td ><?php echo $usuario->rg; ?> </td>
 								 <td ><?php echo $usuario->data_nasc_br; ?> </td>
+								 <td ><?php echo $usuario->salario; ?> </td>
 								 <td >
 								 <a  href="<?php echo $this->config->base_url(); ?>Colaboradores/editar?id=<?php echo $usuario->codigo;?>"><i class="halflings-icon pencil" style='height:20px'  title='Edit' alt='Edit'></i></a>
 								 &nbsp;
