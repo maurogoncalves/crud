@@ -1,4 +1,4 @@
-# moat
+# crud
 app
 
 1 - Clone the project
@@ -11,4 +11,4 @@ app
     
 5 - if migration doesn't work, you can use the script database.sql to create the database
 
-6 - you can access the app with the user admin and super secret password '123456'
+
