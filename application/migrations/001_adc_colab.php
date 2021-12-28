@@ -16,6 +16,10 @@ class Migration_Adc_Colab extends CI_Migration
                  'type' => 'VARCHAR',
                  'constraint' => '300',
               ),			 
+              'email' => array(
+               'type' => 'VARCHAR',
+               'constraint' => '300',
+            ),			 
               'cpf' => array(
                  'type' => 'VARCHAR',
                  'constraint' => '20',
