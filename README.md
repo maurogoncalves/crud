@@ -13,9 +13,9 @@ app
 
 6 - Os endpoints foram criando com basic auth, usuário e senha é o valor "CRUD"
 
-7 - Os endpoints tem ter o X-API-KEY no header com o valor crud@2022
+7 - Os endpoints precisa ter o X-API-KEY no header com o valor crud@2022
 
-8 - Os endpoints foram testados via php, entra na pasta teste_api
+8 - Os endpoints foram testados via php, na pasta teste_api tem os scripts
 
 9 - No postman podem ser testados todos os endpoints, basta importar a collection que está na pasta collection.
 
@@ -25,6 +25,6 @@ app
 
 12 - Para apagar um colaborador deve passar o codigo via url no postman localhost/crud/index.php/api/Colaboradores/2
 
-13 - Todos os retornos da api e usado o json.
+13 - Todos os retornos da api é usado o json.
 
 
