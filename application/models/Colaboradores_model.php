@@ -30,7 +30,7 @@ function atualizar($dados,$id){
 
 function list($id){	
   if($id == 0){
-  $sql = "select *,DATE_FORMAT(data_nasc,'%d/%m/%Y') as data_nasc_br from users u left join salario s on u.codigo = s.user_id and s.salario_atual ='yes'";
+  $sql = "select u.*,DATE_FORMAT(data_nasc,'%d/%m/%Y') as data_nasc_br,s.salario,DATE_FORMAT(s.date_created,'%d/%m/%Y') as data_aumento from users u left join salario s on u.codigo = s.user_id and s.salario_atual ='yes'";
   $query = $this->db->query($sql, array());
 }else{
   $sql = "select *,DATE_FORMAT(data_nasc,'%d/%m/%Y') as data_nasc_br from users   where codigo = ?";

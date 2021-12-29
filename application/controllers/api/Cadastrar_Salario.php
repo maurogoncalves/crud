@@ -1,6 +1,6 @@
 <?php
 require(APPPATH.'/libraries/REST_Controller.php');     
-class Salario_Colaborador extends REST_Controller {
+class Cadastrar_Salario extends REST_Controller {
     
 	  /**
      * Get All Data from this method.
@@ -46,7 +46,7 @@ class Salario_Colaborador extends REST_Controller {
                 );
                 $this->Colaboradores_model->atualizarSalario($dados,$input['user_id']);	
 
-
+                $input['date_created'] = date("Y-m-d");
                 $this->db->insert('salario', $input);
 
                

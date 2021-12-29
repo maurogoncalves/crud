@@ -1,0 +1,272 @@
+{
+	"info": {
+		"_postman_id": "d0348cd4-f663-40ca-a5c9-50cbff614a2e",
+		"name": "Colaboradores",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "mostrar-colaboradores",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "CRUD",
+						"username": "CRUD"
+					}
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-API-KEY",
+						"value": "crud@2022",
+						"type": "string"
+					}
+				],
+				"url": "localhost/crud/index.php/api/Colaboradores"
+			},
+			"response": []
+		},
+		{
+			"name": "criar-colaborador",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "CRUD",
+						"username": "CRUD"
+					}
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-API-KEY",
+						"value": "crud@2022",
+						"type": "string"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nomeCompleto",
+							"value": "teste",
+							"description": "nome",
+							"type": "string"
+						},
+						{
+							"key": "cpf",
+							"value": "173.865.928-31",
+							"description": "obrigatorio unico",
+							"type": "string"
+						},
+						{
+							"key": "email",
+							"value": "a@a.com.br",
+							"description": "obrigatorio unico",
+							"type": "string"
+						},
+						{
+							"key": "rg",
+							"value": "1111111111",
+							"description": "alfanumerico",
+							"type": "string"
+						},
+						{
+							"key": "data_nasc",
+							"value": "2000-01-01",
+							"description": "data formato americano",
+							"type": "string"
+						},
+						{
+							"key": "cep",
+							"value": "13.806-404",
+							"description": "cep",
+							"type": "string"
+						},
+						{
+							"key": "endereco",
+							"value": "rua",
+							"description": "texto livre",
+							"type": "string"
+						},
+						{
+							"key": "numero",
+							"value": "33",
+							"description": "alfanumerico",
+							"type": "string"
+						},
+						{
+							"key": "cidade",
+							"value": "cidade",
+							"description": "texto livre",
+							"type": "string"
+						},
+						{
+							"key": "estado",
+							"value": "MG",
+							"description": "2 caracteres",
+							"type": "string"
+						}
+					]
+				},
+				"url": "localhost/crud/index.php/api/Colaboradores"
+			},
+			"response": []
+		},
+		{
+			"name": "atualizar-colaborador",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "CRUD",
+						"username": "CRUD"
+					}
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "X-API-KEY",
+						"value": "crud@2022",
+						"type": "string"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "codigo",
+							"value": "2",
+							"description": "obrigatorio",
+							"type": "string"
+						},
+						{
+							"key": "nomeCompleto",
+							"value": "testeaaaaaaaaa",
+							"description": "nome",
+							"type": "string"
+						},
+						{
+							"key": "cpf",
+							"value": "173.865.928-31",
+							"description": "obrigatorio unico",
+							"type": "string"
+						},
+						{
+							"key": "email",
+							"value": "a@a.com.br",
+							"description": "obrigatorio unico",
+							"type": "string"
+						},
+						{
+							"key": "rg",
+							"value": "1111111111",
+							"description": "alfanumerico",
+							"type": "string"
+						},
+						{
+							"key": "data_nasc",
+							"value": "2000-01-01",
+							"description": "data formato americano",
+							"type": "string"
+						},
+						{
+							"key": "cep",
+							"value": "13.806-404",
+							"description": "cep",
+							"type": "string"
+						},
+						{
+							"key": "endereco",
+							"value": "rua",
+							"description": "texto livre",
+							"type": "string"
+						},
+						{
+							"key": "numero",
+							"value": "331",
+							"description": "alfanumerico",
+							"type": "string"
+						},
+						{
+							"key": "cidade",
+							"value": "cidade",
+							"description": "texto livre",
+							"type": "string"
+						},
+						{
+							"key": "estado",
+							"value": "MG",
+							"description": "2 caracteres",
+							"type": "string"
+						}
+					]
+				},
+				"url": "localhost/crud/index.php/api/Colaboradores"
+			},
+			"response": []
+		},
+		{
+			"name": "apagar-colaborador",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "CRUD",
+						"username": "CRUD"
+					}
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "X-API-KEY",
+						"value": "crud@2022",
+						"type": "string"
+					}
+				],
+				"url": "localhost/crud/index.php/api/Colaboradores/2"
+			},
+			"response": []
+		},
+		{
+			"name": "vincular-salario",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "CRUD",
+						"username": "CRUD"
+					}
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-API-KEY",
+						"value": "crud@2022",
+						"type": "string"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "user_id",
+							"value": "2",
+							"description": "obrigatorio",
+							"type": "string"
+						},
+						{
+							"key": "salario",
+							"value": "2200.00",
+							"description": "obrigatorio",
+							"type": "string"
+						}
+					]
+				},
+				"url": "localhost/crud/index.php/api/Cadastrar_Salario"
+			},
+			"response": []
+		}
+	]
+}

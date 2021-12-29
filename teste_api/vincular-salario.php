@@ -3,7 +3,7 @@
 $curl = curl_init();
 
 curl_setopt_array($curl, array(
-  CURLOPT_URL => 'localhost/crud/index.php/api/Salario_Colaborador',
+  CURLOPT_URL => 'localhost/crud/index.php/api/Cadastrar_Salario',
   CURLOPT_RETURNTRANSFER => true,
   CURLOPT_ENCODING => '',
   CURLOPT_MAXREDIRS => 10,
@@ -16,7 +16,7 @@ curl_setopt_array($curl, array(
     'X-API-KEY: crud@2022',
     'Authorization: Basic Q1JVRDpDUlVE',
     'Content-Type: application/x-www-form-urlencoded',
-    'Cookie: ci_session=51vpdl5q734t6vpb9sq3f34d4veiokfs'
+    'Cookie: ci_session=im3mu706ng726b2r20f162mib2hikd84'
   ),
 ));
 
